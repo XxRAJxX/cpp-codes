@@ -38,4 +38,7 @@ int main(){
 	F1.get_data();
 	F1.get_rate();
 	F1.put_data();
+ F2.get_data();
+ F2.get_rate();
+ F2.put_data();
 }
