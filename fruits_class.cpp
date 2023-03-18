@@ -34,7 +34,7 @@ public:
 };
 
 int main(){
-	Fruit F1,F2;
+ Fruit F1,F2;
 	F1.get_data();
 	F1.get_rate();
 	F1.put_data();
