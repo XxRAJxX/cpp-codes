@@ -42,15 +42,10 @@ public:
 		else if(NoOfDimensions == 3)
 			perimeter = side1+side2+side3;	
 	}
-	void getName(char name[50]){
+	char[50] getName(char name[50]){
 		cout<<"enter the shape name : ";
 		cin>>ShapeName;
-		if(strcmp(name,ShapeName) == 0){
-			S1.getNoOfDimensions();
-			S1.computePerimeter();
-			S1.printData();}
-		else
-			cout<<"no such shape found";
+		return ShapeName[50];
 
 	}	
 	void printData(){
