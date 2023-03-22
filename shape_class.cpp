@@ -1,4 +1,4 @@
-/*Create a class named Shape with a private data members – ShapeName(char array), NoOfDimensions(int), Side1(double),Side2(double),Side3(double) and Perimeter(double). Add the following member functions – a) getNoOfDimenstions() that takes the number of unique sides as input and updates the NoOfDimensions data member, b) computePerimeter() – computes the perimeter of the shape and
+U/*Create a class named Shape with a private data members – ShapeName(char array), NoOfDimensions(int), Side1(double),Side2(double),Side3(double) and Perimeter(double). Add the following member functions – a) getNoOfDimenstions() that takes the number of unique sides as input and updates the NoOfDimensions data member, b) computePerimeter() – computes the perimeter of the shape and
 updates the data member, c) getName() – that takes the name of shape as input and updates the ShapeName and d) printData() – that prints all the details of the invoking object. Write a C++ program to implement and test the above.*/
 #include<iostream>
 #include<cstring>
@@ -42,10 +42,10 @@ public:
 		else if(NoOfDimensions == 3)
 			perimeter = side1+side2+side3;	
 	}
-	char[50] getName(char name[50]){
+	char[] getName(){
 		cout<<"enter the shape name : ";
 		cin>>ShapeName;
-		return ShapeName[50];
+		return ShapeName;
 
 	}	
 	void printData(){
