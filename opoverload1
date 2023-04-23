@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+class Fraction{
+private:
+    double Nr,Dr;
+public: 
+    Fraction(){
+        Nr = 0.0;
+        Dr = 0.0;
+    }
+    Fraction(double N, double D){
+        Nr = N;
+        Dr = D;
+    }
+    void putData(){
+        cout<<Nr<<"/"<<Dr;
+    }
+    Fraction operator+(Fraction f1){
+        Fraction frac;
+        frac.Dr = Dr*f1.Dr;
+        frac.Nr = Nr*f1.Dr + Dr*f1.Nr;
+    }
+    Fraction operator*(Fraction f1){
+        Fraction frac1;
+        frac1.Dr = Dr*f1.Dr;
+        frac1.Nr = Nr*f1.Nr;
+    }
+};
+int main() {
+    Fraction F1(6,3),F2(9,5);
+    Fraction F3;
+    F3 = F1 + F2;
+    F3.putData();
+    F3 = F1 * F2;
+    return 0;
+}
