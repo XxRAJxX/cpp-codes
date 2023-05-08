@@ -1,0 +1,69 @@
+#include<iostream>
+using namespace std;
+class PBook{
+private: 
+	int Pageno;
+public:
+	PBook(){
+		Pageno = 0;
+	}
+	PBook(int pgno){
+		Pageno = pgno;	
+	}
+	void dispData(){
+		cout<<"page nos is: "<<Pageno<<endl;	
+	}
+	int retpageno(){
+		return Pageno;	
+	}
+	
+};
+class ABook{
+private:
+	int Booklength;
+public:
+	ABook(){
+		Booklength = 0;	
+	}
+	ABook(PBook obj){
+		Booklength = 150*obj.retpageno();	
+	}
+	void DispData(){
+		cout<<"Considering it takes two and a half mins to read one page"<<endl;
+		cout<<"time of listening: "<<Booklength<<" secs"<<endl;	
+	}
+	int retBL(){
+		return Booklength;
+	}
+};
+class Time{
+	int hrs,mins,secs;
+
+public:
+	Time(){
+		hrs = 0;
+		mins = 0;
+		secs = 0;	
+	}
+	Time(ABook obj){
+		hrs = obj.retBL()/3600;
+		mins = (obj.retBL() - hrs*3600)/60;
+		secs = (obj.retBL() - hrs*3600 - mins*60);		
+	}
+	void putData(){
+		cout<<"in hours:mins:secs format:"<<endl;
+		cout<<hrs<<":"<<mins<<":"<<secs<<endl;	
+	}	
+};
+
+int main(){
+	int pgno;
+	cout<<"enter page number: ";
+	cin>>pgno;
+	PBook PB1(pgno);
+	ABook AB1(PB1);
+	Time T1(AB1);
+	PB1.dispData();
+	AB1.DispData();
+	T1.putData();
+}
